@@ -7,6 +7,8 @@ import Layout from './pages/Layout';
 import Inscription from './pages/inscription';
 import Connextion from './pages/connextion';
 import Photos from './pages/Photos';
+import './index.css';
+
 
 export default function App() {
   return (
@@ -18,7 +20,6 @@ export default function App() {
         <Route path="/photos" element={<Photos />} />
         <Route path="/inscription" element={<Inscription />} />
         <Route path="/connextion" element={<Connextion />} />
-
         </Route>
       </Routes>
     </BrowserRouter>
