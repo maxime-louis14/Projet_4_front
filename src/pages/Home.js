@@ -1,5 +1,15 @@
-const Home = () => {
-    return <h1>Home</h1>;
-  };
-  
-  export default Home;
+import React, { Component } from 'react';
+import { Gallery } from '../Gallery.js';
+
+class Home extends Component {
+
+  render() {
+    return (
+      <div>
+        <Gallery />
+      </div>
+    );
+  }
+}
+
+export default Home
