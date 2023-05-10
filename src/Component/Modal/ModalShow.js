@@ -1,6 +1,6 @@
-import React from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
-import handleSubmit from '../FormImage.js'
+import handleSubmit from '../UploadImage.js'
 
 // function to handle the files
 function handleFile(files) {
