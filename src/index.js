@@ -13,6 +13,7 @@ import Layout from "./pages/Layout";
 import Inscription from "./pages/inscription";
 import Connextion from "./pages/connextion";
 import Photos from "./pages/Photos";
+import "./index.css";
 import { authContext, AuthProvider } from "./Context/authContext";
 function App() {
   const { auth } = useContext(authContext);
