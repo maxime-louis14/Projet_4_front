@@ -2,6 +2,7 @@ import { useEffect, useState, createContext, useContext } from "react";
 import { Outlet, Link } from "react-router-dom";
 import { authContext } from "../Context/authContext";
 
+
 const Layout = () => {
   const { auth, setAuth } = useContext(authContext);
   return (
@@ -13,6 +14,9 @@ const Layout = () => {
           </li>
           <li>
             <Link to="/compte">Compte</Link>
+          </li>
+          <li>
+            <Link to="/photos">MesPhotos</Link>
           </li>
           <li>
             <Link to="/connextion">Connextion</Link>
