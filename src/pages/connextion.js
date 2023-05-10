@@ -29,13 +29,9 @@ const Connextion = ({ token, setToken }) => {
       body: JSON.stringify({ email: data.email, password: data.password }),
     };
     fetch("http://localhost:3000/login", requestOptions)
-      .then((response) => {
-        if (response.status == 401) {
-          alert("mot de passe ou adresse mail invalide");
-        }
-        response.json();
-      })
+      .then((response) => response.json())
       .then((data) => {
+        console.log(data);
         localStorage.setItem("token", data.token);
         setAuth(data.token);
       })
