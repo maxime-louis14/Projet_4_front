@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Gallery } from '../Gallery.js';
+import { Gallery } from '../Component/Gallery.js';
 
 class Home extends Component {
 
