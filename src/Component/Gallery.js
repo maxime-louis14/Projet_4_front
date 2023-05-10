@@ -27,7 +27,7 @@ export const Gallery = () => ( // Définition du composant Gallery
           fit: "crop", // Paramètre fit pour définir comment ajuster l'image dans sa zone de coupe
           fm: "jpg" // Paramètre fm pour définir le format de l'image
         }}
-        width="600" // Attribut width pour définir la largeur de l'image
+        width="495" // Attribut width pour définir la largeur de l'image
         height="600" // Attribut height pour définir la hauteur de l'image
       />
     ))}

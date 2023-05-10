@@ -1,7 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import handleSubmit from '../FormImage.js'
 
-
+// function to handle the files
 function handleFile(files) {
   alert("Number of files: " + files.length);
 }
@@ -48,19 +49,25 @@ export const DragDropFile = () => {
   };
   
   return (
-    <form id="form-file-upload" onDragEnter={handleDrag} onSubmit={(e) => e.preventDefault()}>
+    // form element to upload files
+    <form id="form-file-upload" onDragEnter={handleDrag} onSubmit={handleSubmit}>
+      {/* input element to select files */}
       <input ref={inputRef} type="file" id="input-file-upload" multiple={true} onChange={handleChange} />
+      {/* label element to drag and drop files */}
       <label id="label-file-upload" htmlFor="input-file-upload" className={dragActive ? "drag-active" : "" }>
         <div>
           <p>Drag and drop your file here or</p>
+          {/* button element to trigger input */}
           <button className="upload-button" onClick={onButtonClick}>Upload a file</button>
         </div> 
       </label>
+      {/* div element to handle drag events */}
       { dragActive && <div id="drag-file-element" onDragEnter={handleDrag} onDragLeave={handleDrag} onDragOver={handleDrag} onDrop={handleDrop}></div> }
     </form>
   );
 };
 
+// modal component
 export default class Modal extends React.Component {
   render() {
     if (!this.props.show) {
@@ -69,11 +76,15 @@ export default class Modal extends React.Component {
     return (
       <div class="modal" id="modal">
         <h2>Modal Window</h2>
+        {/* drag and drop file component */}
         <DragDropFile />
+        {/* content element */}
         <div class="content">
           {this.props.children}
         </div>
+        {/* actions element */}
         <div class="actions">
+          {/* button element to close the modal */}
           <button class="toggle-button" onClick={this.props.onClose}>
             close
           </button>
@@ -83,6 +94,7 @@ export default class Modal extends React.Component {
   }
 }
 
+// propTypes for Modal component
 Modal.propTypes = {
   onClose: PropTypes.func.isRequired,
   show: PropTypes.bool.isRequired
