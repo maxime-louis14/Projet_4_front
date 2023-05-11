@@ -11,7 +11,7 @@ import Home from "./pages/Home";
 import Compte from "./pages/Compte";
 import Layout from "./pages/Layout";
 import Inscription from "./pages/inscription";
-import Connextion from "./pages/connextion";
+import Connection from "./pages/connection";
 import Photos from "./pages/Photos";
 import "./index.css";
 import { authContext, AuthProvider } from "./Context/authContext";
@@ -26,10 +26,10 @@ function App() {
           <Route index element={<Home />} />
           <Route path="/compte" element={<Compte />} />
           <Route path="/inscription" element={<Inscription />} />
-          <Route path="/connextion" element={<Connextion />} />
+          <Route path="/connection" element={<Connection />} />
           <Route
             path="/photos"
-            element={auth ? <Photos /> : <Navigate to="/connextion" />}
+            element={auth ? <Photos /> : <Navigate to="/connection" />}
           />
         </Route>
       </Routes>
