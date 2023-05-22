@@ -1,15 +1,12 @@
-import React, { Component } from 'react';
-import { Gallery } from '../Component/Gallery.js';
+import React, { Component } from "react";
+import Gallery from "../Component/Gallery.js";
 
-class Home extends Component {
+const Home = () => {
+  return (
+    <div>
+      <Gallery />
+    </div>
+  );
+};
 
-  render() {
-    return (
-      <div>
-        <Gallery />
-      </div>
-    );
-  }
-}
-
-export default Home
+export default Home;
