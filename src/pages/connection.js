@@ -4,7 +4,7 @@ import { useForm } from "react-hook-form";
 import * as Yup from "yup";
 import { authContext } from "../Context/authContext";
 
-const Connextion = ({ token, setToken }) => {
+const Connection = ({ token, setToken }) => {
   useEffect(() => {
     console.log("hello");
   }, []);
@@ -66,4 +66,4 @@ const Connextion = ({ token, setToken }) => {
   );
 };
 
-export default Connextion;
+export default Connection;
